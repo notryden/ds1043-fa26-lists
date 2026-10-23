@@ -8,13 +8,21 @@ from pathlib import Path
 
 def clamp(a: list[int], low: int = 0, high: int = 10) -> None:
     """Modify the values of a to be `low` when they fall below `low` or `high` when the fall above `high`"""
-    return
+    for i, num in enumerate(a):
+        if num < low:
+            a[i] = low
+        elif num > high:
+            a[i] = high
 
 
 # Try writing your own reverse function by actually moving values around rather than
 # using reversed, list.reverse, a[::-1], etc
 def reverse(a: list) -> None:
     """Reverses the list a in place"""
+    temp = []
+    for i in range(len(a) - 1, -1, -1):
+        temp.append(a[i])
+    a = temp
     return
 
 
