@@ -4,7 +4,7 @@ Exercises for exploring lists
 """
 
 from pathlib import Path
-from itertools import chain
+
 
 def clamp(a: list[int], low: int = 0, high: int = 10) -> None:
     """Modify the values of a to be `low` when they fall below `low` or `high` when the fall above `high`"""
@@ -92,4 +92,3 @@ def match_parentheses(line: str) -> list[str]:
     for r in right:
         full.extend(r)
     return full
-
